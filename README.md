@@ -8,18 +8,25 @@ The environent contains anaconda, mummer, picard tools, nextflow , bwa and samto
 
 	The singularity environment is built using the following command
 
-		sudo singularity Bianca.simg Bianca_standard_env.conf
+		sudo singularity build Bianca.simg Bianca_standard_env.conf
 
 
 # Use the environment
 
-	Create a sbatch script, instead of loading modules, you run the  following:
+	In an interactive session, instead of loading modules, you run the  following:
 
 		singularity shell Bianca.simg
 
 	now you have access to the conda packages within the Bianca.simg environment.
 	
 	you may leave  the environemnt by typing exit.
+
+    in an sbatch script you may do the following:
+
+        singularity exec Bianca.simg <command>
+
+    for instance, you may run nucmer using the following command:
+        singularity exec Bianca.simg nucmer ref.fa contigs.fa
 
 
 # Edit the  environment
