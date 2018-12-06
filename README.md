@@ -8,7 +8,7 @@ The environent contains anaconda, mummer, picard tools, nextflow , bwa and samto
 
 	The singularity environment is built using the following command
 
-		sudo singularity build Bianca.simg Bianca_standard_env.conf
+		sudo singularity build Bianca.simg Singularity
 
 
 # Use the environment
