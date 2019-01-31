@@ -25,6 +25,7 @@ conda config --add channels bioconda
 
 conda install -c bioconda mummer4 samtools bwa picard
 conda install -c bioconda abyss
+conda install -c bioconda lumpy-sv
 
 touch /`date -u -Iseconds`
 
