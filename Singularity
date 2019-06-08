@@ -20,6 +20,8 @@ LC_ALL=C.UTF-8
     cd /root/ && chmod 700 ./Miniconda2-latest-Linux-x86_64.sh
     cd /root/ && bash ./Miniconda2-latest-Linux-x86_64.sh -b -p /opt/anaconda/
 
+    export PATH=/opt/anaconda/bin:${PATH}
+
     conda config --add channels defaults
     conda config --add channels conda-forge
     conda config --add channels bioconda
@@ -27,11 +29,7 @@ LC_ALL=C.UTF-8
     conda install -f -c conda-forge -c bioconda wisecondorx
     pip install -U git+https://github.com/CenterForMedicalGeneticsGhent/WisecondorX
     conda install r-ichorcna
-    conda install -c bioconda samtools bwa sambamba minimap2
-    conda install -c bioconda biobambam 
-    conda install -c bioconda lumpy-sv
+    conda install -c bioconda samtools sambamba minimap2 biobambam
+    conda install -c bioconda lumpy-sv mummer4 bwa picard abyss
 
-    conda install -c bioconda mummer4 bwa picard
-    conda install -c bioconda abyss
-
-    pip install CITE-seq-Count==1.4.2
+    pip install CITE-seq-Count
