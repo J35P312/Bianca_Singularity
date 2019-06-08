@@ -1,35 +1,49 @@
 # Bianca_Singularity
-A template config for creating singularity environments for the Bianca cluster.
+Singularity container for running basic Bioinformatic analysis on the Bianca cluster.
 
 The environent contains 
+
+	Abyss
+
+	bedtools
+
+	BCFtools
+
+	biobambam
+
+	bwa
+
+	Cite-seq-count
+
+	GATK 4
+
+	IchorCNA
+
+	Lumpy
+
+	minimap2
 
 	mummer
 
 	picard tools
 
-	Cite-seq-count
-
-	Abyss
-
-	WisecondorX
-
-	bwa
-
 	samtools
 
-	minimap2
+	Tabix
 
-	biobambam
+	VT
 
-	IchorCNA
-	
-	Lumpy
+	WisecondorX
 
 # Create the environment
 
 	The singularity environment is built using the following command
 
 		sudo singularity build Bianca.simg Singularity
+
+	Or downloaded through the following command:
+
+		singularity pull --name Bianca.simg shub://J35P312/Bianca_Singularity
 
 
 # Use the environment

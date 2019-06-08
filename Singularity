@@ -29,7 +29,7 @@ LC_ALL=C.UTF-8
     conda install -f -c conda-forge -c bioconda wisecondorx
     pip install -U git+https://github.com/CenterForMedicalGeneticsGhent/WisecondorX
     conda install r-ichorcna
-    conda install -c bioconda samtools sambamba minimap2 biobambam
-    conda install -c bioconda lumpy-sv mummer4 bwa picard abyss
+    conda install -c bioconda samtools sambamba minimap2 biobambam bedtools
+    conda install -c bioconda lumpy-sv mummer4 bwa picard abyss gatk4 vt bcftools tabix
 
     pip install CITE-seq-Count
