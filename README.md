@@ -1,8 +1,28 @@
 # Bianca_Singularity
-A template config for creating singularity environments for the Bianca cluster. This config is based on the
-truatpasteurdotfr/singularity-docker-anaconda environment.
+A template config for creating singularity environments for the Bianca cluster.
 
-The environent contains anaconda, mummer, picard tools, nextflow , bwa and samtools.
+The environent contains 
+
+	mummer
+
+	picard tools
+
+	Cite-seq-count
+
+	Abyss
+
+	WisecondorX
+
+	bwa
+
+	samtools
+
+	minimap2
+
+	biobambam
+
+	IchorCNA
+
 
 # Create the environment
 
