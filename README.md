@@ -22,7 +22,8 @@ The environent contains
 	biobambam
 
 	IchorCNA
-
+	
+	Lumpy
 
 # Create the environment
 
