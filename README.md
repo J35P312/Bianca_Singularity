@@ -22,6 +22,8 @@ The environent contains
 	cyvcf2
 	
 	Fermi2
+	
+	Freebayes
 
 	GATK 4
 
@@ -39,9 +41,13 @@ The environent contains
 	
 	pytabix
 
+	sambamba
+
 	samtools
 	
 	Star
+	
+	Star-fusion
 
 	Tabix
 
