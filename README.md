@@ -6,14 +6,22 @@ The environent contains
 	Abyss
 
 	bedtools
+	
+	BESST
 
 	BCFtools
 
 	biobambam
 
 	bwa
+	
+	CD-hit
 
 	Cite-seq-count
+	
+	cyvcf2
+	
+	Fermi2
 
 	GATK 4
 
@@ -26,8 +34,14 @@ The environent contains
 	mummer
 
 	picard tools
+	
+	pysam
+	
+	pytabix
 
 	samtools
+	
+	Star
 
 	Tabix
 
