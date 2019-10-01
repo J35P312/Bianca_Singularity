@@ -34,3 +34,27 @@ LC_ALL=C.UTF-8
     pip install BESST
     pip install svdb
     pip install CITE-seq-Count
+    
+    cd /
+
+    mkdir reference
+    cd reference
+    wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.annotation.gtf.gz
+    wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh38.primary_assembly.genome.fa.gz
+    wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.transcripts.fa.gz
+
+    wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/gencode.v32lift37.annotation.gtf.gz
+    wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/gencode.v32lift37.transcripts.fa.gz
+    wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/GRCh37.primary_assembly.genome.fa.gz
+
+    wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/gencode.v32lift37.metadata.HGNC.gz
+    wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.metadata.HGNC.gz
+
+    wget https://hgdownload.cse.ucsc.edu/goldenPath/panPan2/bigZips/panPan2.fa.gz
+    wget https://hgdownload.cse.ucsc.edu/goldenPath/panTro5/bigZips/panTro5.fa.gz
+
+    samtools faidx GRCh38.primary_assembly.genome.fa.gz
+    samtools faidx GRCh37.primary_assembly.genome.fa.gz
+    samtools faidx panPan2.fa.gz
+    samtools faidx panTro5.fa.gz
+    
