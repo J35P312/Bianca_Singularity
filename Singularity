@@ -30,7 +30,7 @@ LC_ALL=C.UTF-8
     pip install -U git+https://github.com/CenterForMedicalGeneticsGhent/WisecondorX
     conda install r-ichorcna
     conda install -c bioconda samtools sambamba minimap2 biobambam bedtools cd-hit fermi2 star pysam pytabix freebayes
-    conda install -c bioconda lumpy-sv mummer4 bwa picard abyss gatk4 vt bcftools tabix salmon blast cyvcf2 star-fusion
+    conda install -c bioconda lumpy-sv mummer4 bwa picard abyss gatk4 vt bcftools tabix salmon blast cyvcf2 star-fusion clustalo
     pip install BESST
     pip install svdb
     pip install CITE-seq-Count
@@ -57,4 +57,9 @@ LC_ALL=C.UTF-8
     samtools faidx GRCh37.primary_assembly.genome.fa.gz
     samtools faidx panPan2.fa.gz
     samtools faidx panTro5.fa.gz
+    
+    samtools dict GRCh38.primary_assembly.genome.fa.gz > GRCh38.primary_assembly.genome.dict
+    samtools dict GRCh37.primary_assembly.genome.fa.gz > GRCh37.primary_assembly.genome.dict
+    samtools dict panPan2.fa.gz > panPan2.dict
+    samtools dict panTro5.fa.gz > panTro5.dict
     
