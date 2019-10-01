@@ -19,6 +19,8 @@ The environent contains
 
 	Cite-seq-count
 	
+	ClustalO
+	
 	cyvcf2
 	
 	Fermi2
@@ -56,6 +58,8 @@ The environent contains
 	VT
 
 	WisecondorX
+
+References are found in the /reference folder These references include:
 
 # Create the environment
 
