@@ -48,6 +48,8 @@ The environent contains
 	Star
 	
 	Star-fusion
+	
+	SVDB
 
 	Tabix
 
