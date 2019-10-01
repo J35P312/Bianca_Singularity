@@ -32,4 +32,5 @@ LC_ALL=C.UTF-8
     conda install -c bioconda samtools sambamba minimap2 biobambam bedtools cd-hit fermi2 star pysam pytabix freebayes
     conda install -c bioconda lumpy-sv mummer4 bwa picard abyss gatk4 vt bcftools tabix salmon blast cyvcf2 star-fusion
     pip install BESST
+    pip install svdb
     pip install CITE-seq-Count
