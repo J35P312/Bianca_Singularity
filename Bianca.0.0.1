@@ -29,12 +29,17 @@ LC_ALL=C.UTF-8
     conda install -f -c conda-forge -c bioconda wisecondorx
     pip install -U git+https://github.com/CenterForMedicalGeneticsGhent/WisecondorX
     conda install r-ichorcna
-    conda install -c bioconda samtools sambamba minimap2 biobambam bedtools cd-hit fermi2 star pysam pytabix freebayes
+    conda install -c bioconda samtools sambamba minimap2 biobambam bedtools cd-hit fermi2 star pysam pytabix freebayes delly manta
     conda install -c bioconda lumpy-sv mummer4 bwa picard abyss gatk4 vt bcftools tabix salmon blast cyvcf2 star-fusion clustalo
+
     pip install BESST
     pip install svdb
     pip install CITE-seq-Count
-    
+
+    cd /bin/ && wget https://github.com/SciLifeLab/TIDDIT/archive/TIDDIT-2.8.0.zip && unzip TIDDIT-2.8.0.zip
+    mv /bin/TIDDIT-TIDDIT-2.8.0 /bin/TIDDIT
+    cd /bin/TIDDIT && ./INSTALL.sh .
+
     cd /
 
     mkdir reference
@@ -42,24 +47,46 @@ LC_ALL=C.UTF-8
     wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.annotation.gtf.gz
     wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh38.primary_assembly.genome.fa.gz
     wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.transcripts.fa.gz
+    gunzip GRCh38.primary_assembly.genome.fa.gz
+    bgzip GRCh38.primary_assembly.genome.fa
 
     wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/gencode.v32lift37.annotation.gtf.gz
     wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/gencode.v32lift37.transcripts.fa.gz
     wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/GRCh37.primary_assembly.genome.fa.gz
+    gunzip GRCh37.primary_assembly.genome.fa.gz
+    bgzip GRCh37.primary_assembly.genome.fa
 
     wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/gencode.v32lift37.metadata.HGNC.gz
     wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.metadata.HGNC.gz
 
-    wget https://hgdownload.cse.ucsc.edu/goldenPath/panPan2/bigZips/panPan2.fa.gz
-    wget https://hgdownload.cse.ucsc.edu/goldenPath/panTro5/bigZips/panTro5.fa.gz
+    wget ftp://ftp.ensembl.org/pub/release-98/fasta/pan_paniscus/dna/Pan_paniscus.panpan1.1.dna.toplevel.fa.gz
+    gunzip Pan_paniscus.panpan1.1.dna.toplevel.fa.gz
+    bgzip Pan_paniscus.panpan1.1.dna.toplevel.fa
+
+    wget ftp://ftp.ensembl.org/pub/release-98/fasta/pan_troglodytes/dna/Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa.gz
+    gunzip Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa.gz
+    bgzip Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa
+
+    wget ftp://ftp.ensembl.org/pub/release-98/fasta/gorilla_gorilla/dna/Gorilla_gorilla.gorGor4.dna.toplevel.fa.gz
+    gunzip Gorilla_gorilla.gorGor4.dna.toplevel.fa.gz
+    bgzip Gorilla_gorilla.gorGor4.dna.toplevel.fa
 
     samtools faidx GRCh38.primary_assembly.genome.fa.gz
     samtools faidx GRCh37.primary_assembly.genome.fa.gz
-    samtools faidx panPan2.fa.gz
-    samtools faidx panTro5.fa.gz
-    
+    samtools faidx Pan_paniscus.panpan1.1.dna.toplevel.fa.gz
+    samtools faidx Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa.gz
+    samtools faidx Gorilla_gorilla.gorGor4.dna.toplevel.fa.gz
+
     samtools dict GRCh38.primary_assembly.genome.fa.gz > GRCh38.primary_assembly.genome.dict
     samtools dict GRCh37.primary_assembly.genome.fa.gz > GRCh37.primary_assembly.genome.dict
-    samtools dict panPan2.fa.gz > panPan2.dict
-    samtools dict panTro5.fa.gz > panTro5.dict
-    
+    samtools dict Pan_paniscus.panpan1.1.dna.toplevel.fa.gz > Pan_paniscus.panpan1.1.dna.toplevel.dict
+    samtools dict Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa.gz > Pan_troglodytes.Pan_tro_3.0.dna.toplevel.dict
+    samtools dict Gorilla_gorilla.gorGor4.dna.toplevel.fa.gz > Gorilla_gorilla.gorGor4.dna.toplevel.dict
+
+    mkdir ENSMBL
+    cd ENSMBL
+
+    wget ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens/Homo_sapiens.GRCh38.98.chr.gtf.gz
+    wget ftp://ftp.ensembl.org/pub/release-98/gtf/pan_paniscus/Pan_paniscus.panpan1.1.98.chr.gtf.gz
+    wget ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens/Homo_sapiens.GRCh38.98.chr.gtf.gz
+    wget ftp://ftp.ensembl.org/pub/release-98/gtf/gorilla_gorilla/Gorilla_gorilla.gorGor4.98.chr.gtf.gz

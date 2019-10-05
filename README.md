@@ -22,6 +22,8 @@ The environent contains
 	ClustalO
 	
 	cyvcf2
+
+	Delly
 	
 	Fermi2
 	
@@ -32,6 +34,8 @@ The environent contains
 	IchorCNA
 
 	Lumpy
+
+	Manta
 
 	minimap2
 
@@ -55,11 +59,22 @@ The environent contains
 
 	Tabix
 
+	TIDDIT
+
 	VT
 
 	WisecondorX
 
 References are found in the /reference folder These references include:
+
+    Gencode GRCh38    : GRCh38.primary_assembly.genome.fa.gz
+    Gencode GRCh37    : GRCh37.primary_assembly.genome.fa.gz
+    ENSMBL Bonobo 1.1 : Pan_paniscus.panpan1.1.dna.toplevel.fa.gz
+    ENSMBL Pantro3    : Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa.gz
+    ENSMBL Gorilla4   : Gorilla_gorilla.gorGor4.dna.toplevel.fa.gz
+
+reference fai and dict are available for all these references; transcript fasta and gene annotation gtf are available for the human reference genomes (Gencode).
+ENSMBL gtf files are available in the /reference/ENSMBL
 
 # Create the environment
 
