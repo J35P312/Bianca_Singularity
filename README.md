@@ -1,7 +1,7 @@
 # Bianca_Singularity
 Singularity container for running basic Bioinformatic analysis on the Bianca cluster.
 
-The environent contains 
+The environment contains 
 
 	Abyss
 
@@ -14,6 +14,8 @@ The environent contains
 	biobambam
 
 	bwa
+
+	Canvas
 	
 	CD-hit
 
@@ -24,6 +26,8 @@ The environent contains
 	cyvcf2
 
 	Delly
+
+	ExpansionHunter
 	
 	Fermi2
 	
