@@ -27,6 +27,8 @@ The environment contains
 
 	Delly
 
+	Emerald
+
 	ExpansionHunter
 	
 	Fermi2
@@ -54,7 +56,9 @@ The environment contains
 	sambamba
 
 	samtools
-	
+
+	sniffles	
+
 	Star
 	
 	Star-fusion
@@ -88,8 +92,7 @@ ENSMBL gtf files are available in the /reference/ENSMBL
 
 	Or downloaded through the following command:
 
-		singularity pull --name Bianca.simg shub://J35P312/Bianca_Singularity
-
+		singularity pull --name Bianca.simg shub://J35P312/Bianca_Singularity:0.0.2
 
 # Use the environment
 
