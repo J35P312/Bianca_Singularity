@@ -5,6 +5,8 @@ The environment contains
 
 	Abyss
 
+	ARCS
+
 	bedtools
 	
 	BESST
